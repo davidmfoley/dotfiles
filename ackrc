@@ -1,0 +1,8 @@
+-a
+--ignore-dir=tags/
+--ignore-dir=tmp/
+--ignore-dir=log/
+--ignore-dir=coverage/
+--ignore-dir=db/source_data/
+--ignore-dir=spec/javascripts/compiled/
+--ignore-dir=public/javascripts/compiled/

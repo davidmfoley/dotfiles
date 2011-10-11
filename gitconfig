@@ -1,0 +1,31 @@
+[user]
+	name = Dave Foley
+	email = davidmfoley@gmail.com
+[color]
+	ui = auto
+[merge]
+	keepBackup = false;
+	tool=myp4merge
+	
+
+[mergetool "myp4merge"]
+	cmd = myp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+
+[mergetool "p4merge"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+	
+
+
+[core]
+	excludesfile = /Users/davidfoley/.gitignore
+[alias]
+	ci = commit
+	co = checkout
+[rerere]
+	enabled = 1
