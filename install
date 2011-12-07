@@ -1,5 +1,5 @@
 #! /usr/bin/env ruby
 this_dir = File.expand_path(File.dirname(__FILE__))
-%w{ackrc gitconfig profile bash_profile}.each do |file|
+%w{ackrc gitconfig profile bash_profile zshrc}.each do |file|
   `ln -s #{File.join(this_dir, file)} ~/.#{file}`
 end
