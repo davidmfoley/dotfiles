@@ -1,14 +1,5 @@
-#source ~/.git-completion.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-#source /usr/local/etc/bash_completion.d/git-completion.bash
-# MacPorts Installer addition on 2009-11-03_at_07:21:52: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/usr/local/bin/:/usr/bin/:$PATH
-#export PATH=/usr/local/bin/:/usr/bin/:/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-#set -x
-export HISTCONTROL=erasedups
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+
+export PATH=~/scripts:/usr/local/bin:/usr/bin:$PATH
 
 # Amazon Web Services
 export AWS_IAM_HOME='/usr/local/bin/aws/iam/'
@@ -33,7 +24,6 @@ function grox {
 function gpox {
   __current_branch_action "push origin "
 }
-#shopt -s histappend
 alias ll='ls -al'
 
 alias gf='git fetch'
@@ -46,9 +36,9 @@ alias gru="git remote show | sed '/heroku/d' | xargs -I {} git remote update {} 
 alias gs="git status"
 alias gdc="git diff --cached"
 alias glx="git log --graph --decorate --all --oneline"
-alias glxx="git log --graph --decorate --all"
-alias be="bundle exec"
 
+alias glxx='git log --graph --all --decorate'
+alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ar %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
 alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias cukewip='RAILS_ENV=test rake cucumber:wip'
 alias cuke='RAILS_ENV=test cucumber'
@@ -61,6 +51,6 @@ alias xco="osascript -e \"tell application \\\"XCode\\\" to quit\" -e \"delay 2\
 export CLICOLOR=1
 export LSCOLORS=gxfxCxDxcxegedabagacad
 export EDITOR='vim'
-source ~/.bashrc
+
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
