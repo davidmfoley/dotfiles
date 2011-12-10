@@ -3,7 +3,8 @@ export PATH=~/scripts:/usr/local/bin:/usr/bin:$PATH
 
 # Amazon Web Services
 export AWS_IAM_HOME='/usr/local/bin/aws/iam/'
-export JAVA_HOME='/usr/bin/java'
+export JAVA_HOME='/Library/Java/Home'
+
 
 function __current_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
