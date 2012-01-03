@@ -23,7 +23,7 @@
 
 
 [core]
-	excludesfile = /Users/davidfoley/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
 	ci = commit
 	co = checkout

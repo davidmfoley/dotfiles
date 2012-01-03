@@ -2,6 +2,7 @@
 --ignore-dir=tags/
 --ignore-dir=tmp/
 --ignore-dir=log/
+--ignore-dir=classes/
 --ignore-dir=coverage/
 --ignore-dir=db/source_data/
 --ignore-dir=spec/javascripts/compiled/

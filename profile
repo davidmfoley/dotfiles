@@ -1,6 +1,7 @@
 
+export VIMCLOJURE_SERVER_JAR="$HOME/.vim/bin/server-2.3.0.jar"
 export PATH=~/scripts:/usr/local/bin:/usr/bin:$PATH
-
+export NODE_PATH=/usr/local/lib/node
 # Amazon Web Services
 export AWS_IAM_HOME='/usr/local/bin/aws/iam/'
 export JAVA_HOME='/Library/Java/Home'
