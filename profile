@@ -27,6 +27,7 @@ function gpox {
   __current_branch_action "push origin "
 }
 alias ll='ls -al'
+alias be='bundle exec'
 
 alias gf='git fetch'
 alias gm='git merge'
