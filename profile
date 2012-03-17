@@ -26,6 +26,12 @@ function grox {
 function gpox {
   __current_branch_action "push origin "
 }
+
+function awklog {
+  echo "awk ' /^$/ {flag=0} /Started.+$2/ {flag=1} flag { print }' $1"
+  eval "awk ' /^$/ {flag=0} /Started.+$2/ {flag=1} flag { print }' $1"
+}
+
 alias ll='ls -al'
 alias be='bundle exec'
 
@@ -41,7 +47,7 @@ alias gdc="git diff --cached"
 alias glx="git log --graph --decorate --all --oneline"
 
 alias glxx='git log --graph --all --decorate'
-alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ar %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
+alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ai %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
 alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias cukewip='RAILS_ENV=test rake cucumber:wip'
 alias cuke='RAILS_ENV=test cucumber'
