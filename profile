@@ -12,8 +12,9 @@ function __current_branch {
 }
 
 function __current_branch_action {
-  echo  "git $1`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`"
-  eval  "git $1`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`"
+  DOTHETHING="git $1$(__current_branch)"
+  echo  "$DOTHETHING"
+  eval  "$DOTHETHING"
 }
 
 function gmox {
@@ -44,8 +45,6 @@ alias grpo='git remote prune origin'
 alias gru="git remote show | sed '/heroku/d' | xargs -I {} git remote update {} --prune; git submodule update"
 alias gs="git status"
 alias gdc="git diff --cached"
-alias glx="git log --graph --decorate --all --oneline"
-
 alias glxx='git log --graph --all --decorate'
 alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ai %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
 alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
