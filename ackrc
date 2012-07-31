@@ -7,3 +7,4 @@
 --ignore-dir=db/source_data/
 --ignore-dir=spec/javascripts/compiled/
 --ignore-dir=public/javascripts/compiled/
+--ignore-dir=.jhw-cache/
