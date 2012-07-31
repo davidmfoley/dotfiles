@@ -12,20 +12,20 @@ function __current_branch {
 }
 
 function __current_branch_action {
-  DOTHETHING="git $1$(__current_branch)"
+  DOTHETHING="git $1$(__current_branch) $2 $3 $4 $5 $6"
   echo  "$DOTHETHING"
   eval  "$DOTHETHING"
 }
 
 function gmox {
-  __current_branch_action "merge origin/"
+  __current_branch_action "merge origin/" $1 $2 $3 $4 $5
 }
 
 function grox {
-  __current_branch_action "rebase origin/"
+  __current_branch_action "rebase origin/" $1 $2 $3 $4 $5
 }
 function gpox {
-  __current_branch_action "push origin "
+  __current_branch_action "push origin " $1 $2 $3 $4 $5
 }
 
 function awklog {
