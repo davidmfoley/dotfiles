@@ -1,5 +1,6 @@
 #! /usr/bin/env ruby
 this_dir = File.expand_path(File.dirname(__FILE__))
+home_dir = File.expand_path('~')
 %w{ackrc gitconfig profile bash_profile zshrc tmux.conf}.each do |file|
-  `ln -s #{File.join(this_dir, file)} ~/.#{file}`
+  `ln -s #{File.join(this_dir, file)} #{home_dir}/.#{file}`
 end
