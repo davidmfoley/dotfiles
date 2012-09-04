@@ -56,6 +56,9 @@ alias rdbm='rake db:migrate db:test:prepare'
 
 alias xco="osascript -e \"tell application \\\"XCode\\\" to quit\" -e \"delay 2\"; open "
 
+#alias vim to mvim if present
+type mvim >/dev/null 2>&1 && alias vim='mvim -v'
+
 export CLICOLOR=1
 export LSCOLORS=gxfxCxDxcxegedabagacad
 export EDITOR='vim'
