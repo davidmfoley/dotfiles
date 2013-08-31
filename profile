@@ -1,4 +1,4 @@
-export PATH=~/scripts:/usr/local/bin:/usr/bin:$PATH
+export PATH=~/scripts:/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules;
 # Amazon Web Services
 export AWS_IAM_HOME='/usr/local/bin/aws/iam/'
