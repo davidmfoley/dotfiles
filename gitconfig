@@ -5,8 +5,11 @@
 	ui = auto
 [merge]
 	keepBackup = false;
-	tool=p4merge
-	
+	tool=kdiff3
+
+[mergetool "kdiff3"]
+  path = "/Applications/kdiff3.app/Contents/MacOS/kdiff3"
+  trustExitCode = false
 
 [mergetool "myp4merge"]
 	cmd = myp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
