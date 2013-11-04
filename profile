@@ -61,5 +61,8 @@ export CLICOLOR=1
 export LSCOLORS=gxfxCxDxcxegedabagacad
 export EDITOR='vim'
 
+export GOPATH="$HOME/go"
+
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
+ulimit -n 1024
