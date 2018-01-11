@@ -30,3 +30,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 complete -C aws_completer aws
 
 [ -s "/Users/dave/.nvm/nvm.sh" ] && . "/Users/dave/.nvm/nvm.sh" # This loads nvm
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+export PATH="$HOME/.cargo/bin:$PATH"

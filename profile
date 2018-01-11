@@ -40,6 +40,8 @@ alias grom='git rebase origin/master'
 alias grc='git rebase --continue'
 alias grpo='git remote prune origin'
 
+# delete merged branches
+alias gdmb="git branch --merged | grep -v '*' | xargs git branch -d"
 alias gru="git remote -v | sed '/heroku/d' | grep fetch | cut -f 1 | xargs -I {} git remote update {} --prune; git submodule update"
 alias gs="git status"
 alias gdc="git diff --cached"
@@ -70,6 +72,8 @@ export PATH=~/scripts:/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:$PATH:$GO
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 
 ulimit -n 1024
+ulimit -n 2048
 
 eval "$(direnv hook $0)"
 
+export PATH="$HOME/.cargo/bin:$PATH"
