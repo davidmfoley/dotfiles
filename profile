@@ -1,7 +1,7 @@
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules;
 # Amazon Web Services
-export AWS_IAM_HOME='/usr/local/bin/aws/iam/'
-export JAVA_HOME="$(/usr/libexec/java_home)"
+#export AWS_IAM_HOME='/usr/local/bin/aws/iam/'
+#export JAVA_HOME="$(/usr/libexec/java_home)"
 
 
 function __current_branch {
@@ -69,10 +69,9 @@ export PATH=~/scripts:/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:$PATH:$GO
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+# [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 
-ulimit -n 1024
-ulimit -n 2048
+ulimit -n 2560
 
 eval "$(direnv hook $0)"
 
