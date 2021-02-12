@@ -5,7 +5,8 @@
 	ui = auto
 [merge]
 	keepBackup = false;
-	tool=p4merge
+	tool = fugitive
+  conflictstyle = diff3
 
 [mergetool "kdiff3"]
   path = "/Applications/kdiff3.app/Contents/MacOS/kdiff3"
@@ -22,13 +23,25 @@
 	keepTemporaries = false
 	trustExitCode = false
 	keepBackup = false
-	
 
+[mergetool "fugitive"]
+  cmd = nvim -f -c "Gdiff" "$MERGED"
+
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [core]
 	excludesfile = ~/.gitignore
+
 [alias]
 	ci = commit
 	co = checkout
+
 [rerere]
 	enabled = 1
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

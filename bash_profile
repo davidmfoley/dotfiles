@@ -9,29 +9,22 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Save and reload the history after each command finishes
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+source ~/.bashrc
 source ~/.profile
-function __current_branch_ps1 {
-local branch="$(__current_branch)"
-  if [ -z "$branch" ]; then
-    echo ''
-  else
-    echo "[$branch] "
-  fi
-}
-# export PS1='\[\e[35;40m\]\h:\[\e[36;40m\]\W\[\e[32;40m\] $(__current_branch_ps1 "(%s)")\[\e[33;40m\]\$\[\e[0m\] '
-
-export PS1='\[\e[34;40m\]\A \[\e[35;40m\]\h:\[\e[36;40m\]\W\[\e[32;40m\] $(__current_branch_ps1 "(%s)")\[\e[33;40m\]\$\[\e[0m\] '
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 complete -C aws_completer aws
 
-[ -s "/Users/dave/.nvm/nvm.sh" ] && . "/Users/dave/.nvm/nvm.sh" # This loads nvm
-
-export PATH="$HOME/.yarn/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -s /usr/local/etc/bash_completion.d/tmux ] && source /usr/local/etc/bash_completion.d/tmux
 [ -s /usr/local/etc/bash_completion.d/git-completion.bash ] && source /usr/local/etc/bash_completion.d/git-completion.bash
+# [ -s /usr/local/etc/bash_completion.d/aws_bash_completer ] && source /usr/local/etc/bash_completion.d/aws_bash_completer
+
+. $HOME/.asdf/asdf.sh
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
