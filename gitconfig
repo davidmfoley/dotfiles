@@ -5,8 +5,7 @@
 	ui = auto
 [merge]
 	keepBackup = false;
-	tool = fugitive
-  conflictstyle = diff3
+	tool = kdiff3
 
 [mergetool "kdiff3"]
   path = "/Applications/kdiff3.app/Contents/MacOS/kdiff3"
@@ -45,5 +44,6 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+
 [init]
 	defaultBranch = main
